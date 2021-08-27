@@ -58,6 +58,7 @@ Here,
 > yyyy = Name
 > zzzz = Anand
 
+![alt text](https://github.com/anandg1/aws-restrict-IAMuser-access/blob/main/01.png)
 
 This example policy thus restricts an IAM user or group access to only Start/Stop/Reboot EC2 instances in the Asia Pacafic (Mumbai) [ap-south-1] Region that have a tag key of 'Name' with a tag value of 'Anand'.
 
@@ -66,7 +67,9 @@ This example policy thus restricts an IAM user or group access to only Start/Sto
 
 Create a new user from the IAM console and attach our custom IAM policy.
 
+![alt text](https://github.com/anandg1/aws-restrict-IAMuser-access/blob/main/02.png)
 
+![alt text](https://github.com/anandg1/aws-restrict-IAMuser-access/blob/main/03.png)
 
 Now, this user will be able to start/stop/reboot any EC2 instance in the specified region(here ap-south-1) with the a tag key 'Name' having value 'Anand'. It can't alter the state of any other EC2s
 
@@ -74,9 +77,14 @@ Now, this user will be able to start/stop/reboot any EC2 instance in the specifi
 
 Inorder to test and verify the policy is working properly, I have created 2 EC2 instances Anand and Alex with both having their tag key 'Name' and tag value 'Anand' and 'Alex' respectively.
 
-
+![alt text](https://github.com/anandg1/aws-restrict-IAMuser-access/blob/main/04.png)
 
 Now, log in as the IAM user, you will be able to see both the EC2 listed in the region. Try Stopping, starting or rebooting them.
 
+![alt text](https://github.com/anandg1/aws-restrict-IAMuser-access/blob/main/05.png)
 
 We could verify that only the EC2 with Tag key 'Name' and value 'Anand' could be stopped, started or rebooted.
+
+![alt text](https://github.com/anandg1/aws-restrict-IAMuser-access/blob/main/06.png)
+
+![alt text](https://github.com/anandg1/aws-restrict-IAMuser-access/blob/main/07.png)
