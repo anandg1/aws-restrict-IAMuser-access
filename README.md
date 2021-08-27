@@ -87,4 +87,6 @@ We could verify that only the EC2 with Tag key 'Name' and value 'Anand' could be
 
 ![alt text](https://github.com/anandg1/aws-restrict-IAMuser-access/blob/main/06.png)
 
+and for EC2 with tag key 'Name' and tag value 'Alex', you will get a failure message similar to the following:
+
 ![alt text](https://github.com/anandg1/aws-restrict-IAMuser-access/blob/main/07.png)
